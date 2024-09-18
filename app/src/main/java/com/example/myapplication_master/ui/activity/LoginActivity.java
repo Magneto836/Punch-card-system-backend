@@ -135,8 +135,6 @@ public class LoginActivity extends AppCompatActivity {
         // 根据操作类型调用不同的方法
         if (actionType.equals("login")) {
             attemptLogin(username, password);
-        } else if (actionType.equals("regist")) {
-            attemptRegist(username, password);
         }
     }
 
@@ -144,9 +142,7 @@ public class LoginActivity extends AppCompatActivity {
         handleUserInput("login");
     }
 
-    public void handleRegistBtn(View view) {
-        handleUserInput("regist");
-    }
+
 
     private void attemptRequest(String username, String password, String message, Call<UserApiResponse> call) {
         progressDialogHelper.showProgressDialog(message);  // 显示进度框
@@ -204,24 +200,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void attemptRegist(String username, String password) {
-        // 构建请求体
-        Map<String, String> params = new HashMap<>();
-        params.put("username", username);
-        params.put("password", password);
-        params.put("role", "admin");
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8080/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        ApiService apiService = retrofit.create(ApiService.class);
-
-        // 调用通用的请求处理函数
-        Call<UserApiResponse> call = apiService.addUser(username, password, "admin");
-        attemptRequest(username, password, "正在注册……", call);
-    }
 
     private void attemptLogin(String username, String password) {
         // 构建请求体

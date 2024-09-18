@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SetActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:title="公司信息设置" />
+
+    <!-- 第一个输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_positionX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/positionX_str"
+            android:imeOptions="actionNext" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 第二个输入框，位于第一个输入框下方 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_positionY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tl_positionX"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/positionY_str"
+            android:imeOptions="actionNext" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 第三个输入框，位于第二个输入框下方 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_clockIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tl_positionY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/clockIn_str"
+            android:imeOptions="actionNext" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 第四个输入框，位于第三个输入框下方 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_clockOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tl_clockIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/clockOut_str"
+            android:imeOptions="actionDone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/changeBtn"
+        android:layout_width="301dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="544dp"
+        android:text="设置"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findBtn"
+        android:layout_width="301dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="652dp"
+        android:text="查看当前信息"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

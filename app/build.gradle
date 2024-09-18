@@ -41,6 +41,7 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.play.services.location
     implementation libs.circleimageview
+    implementation libs.material.v170
 
     implementation libs.retrofit
     implementation libs.converter.gson

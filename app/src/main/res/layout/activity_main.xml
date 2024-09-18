@@ -5,15 +5,46 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="325dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="140dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="#a8d8ea"
+        android:text="设置公司详细信息"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/allRecord"
+        android:layout_width="136dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="284dp"
+        android:backgroundTint="#a8d8ea"
+        android:text="查看考勤记录"
+        android:textColor="#000000"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/statistics"
+        android:layout_width="143dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#a8d8ea"
+        android:text="查看月度统计数据"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

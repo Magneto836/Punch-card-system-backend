@@ -60,7 +60,12 @@
         <activity android:name=".ui.activity.MainActivity">
 
         </activity>
-    </application>
+
+
+    <activity android:name=".ui.activity.AllRecordActivity"></activity>
+        <activity android:name=".ui.activity.SetActivity"></activity>
+        <activity android:name=".ui.activity.StsActivity"></activity>
+</application>
 
 
 
